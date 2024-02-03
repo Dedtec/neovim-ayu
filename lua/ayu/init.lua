@@ -28,8 +28,8 @@ end
 local function set_groups()
   local groups = {
     -- Base.
-    Normal = { fg = colors.fg, bg = colors.bg },
-    NormalFloat = { bg = colors.bg },
+    Normal = { fg = colors.fg, bg = 'none' },
+    NormalFloat = { bg = 'none' },
     FloatBorder = { fg = colors.comment },
     FloatTitle = { fg = colors.fg },
     ColorColumn = { bg = colors.line },
@@ -41,10 +41,10 @@ local function set_groups()
 
     Directory = { fg = colors.func },
     ErrorMsg = { fg = colors.error },
-    VertSplit = { fg = colors.panel_border, bg = colors.bg },
-    Folded = { fg = colors.fg_idle, bg = colors.panel_bg },
-    FoldColumn = { bg = colors.bg },
-    SignColumn = { bg = colors.bg },
+    VertSplit = { fg = colors.bg, bg = 'none' },
+    Folded = { fg = colors.fg_idle, bg = 'none' },
+    FoldColumn = { bg = 'none' },
+    SignColumn = { bg = 'none' },
 
     MatchParen = { sp = colors.func, underline = true },
     ModeMsg = { fg = colors.string },
@@ -61,7 +61,7 @@ local function set_groups()
     SpellLocal = { sp = colors.keyword, undercurl = true },
     SpellBad = { sp = colors.error, undercurl = true },
     SpellRare = { sp = colors.regexp, undercurl = true },
-    StatusLine = { fg = colors.fg, bg = colors.panel_bg },
+    StatusLine = { fg = colors.fg, bg = 'none' },
     StatusLineNC = { fg = colors.fg_idle, bg = colors.panel_bg },
     WildMenu = { fg = colors.fg, bg = colors.markup },
     TabLine = { fg = colors.comment, bg = colors.panel_shadow },
@@ -149,6 +149,8 @@ local function set_groups()
     TreesitterContext = { bg = colors.selection_inactive },
 
     -- Gitsigns.
+    GitSignsAdd = { fg = colors.vcs_added },
+    GitSignsDelete = { fg = colors.vcs_removed },
     GitSignsAddLn = { fg = colors.vcs_added },
     GitSignsDeleteLn = { fg = colors.vcs_removed },
     GitSignsChange = { fg = colors.vcs_modified },

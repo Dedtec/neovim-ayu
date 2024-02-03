@@ -156,7 +156,7 @@ local function set_groups()
     GitSignsChange = { fg = colors.vcs_modified },
 
     -- Telescope.
-    TelescopePromptBorder = { fg = colors.accent },
+    --TelescopePromptBorder = { fg = colors.accent },
 
     -- Cmp.
     CmpItemAbbrMatch = { fg = colors.keyword },
@@ -219,6 +219,10 @@ local function set_groups()
 
     -- WhichKey.
     WhichKeyFloat = { bg = colors.bg },
+	WhichKeyGroup = { fg = colors.keyword },
+	WhichKeyDesc = { fg = colors.gutter_active },
+	WhichKeySeparator = { fg = colors.guide_normal },
+	WhichKey = { fg = colors.tag },
 
     -- Indent blankline.
     IndentBlanklineContextChar = { fg = colors.comment },
